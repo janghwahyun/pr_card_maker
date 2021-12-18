@@ -3,7 +3,7 @@ import Header from '../header/header';
 import Footer from '../footer/footer';
 
 const Login = ({ authService }) => {
-  const onLogin = event => {
+  const = onLogin = event => {
     authService.login(event.currentTarget.textContent).then(console.log);
   };
 

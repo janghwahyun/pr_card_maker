@@ -3,10 +3,6 @@ import Header from '../header/header';
 import Footer from '../footer/footer';
 
 const Login = ({ authService }) => {
-  const onLogin = event => {
-    authService.login(event.currentTarget.textContent).then(console.log);
-  };
-
   return (
     <section>
       <Header />
@@ -14,10 +10,10 @@ const Login = ({ authService }) => {
         <h1>Login</h1>
         <ul>
           <li>
-            <button onClick={onLogin}>google</button>
+            <button>google</button>
           </li>
           <li>
-            <button onClick={onLogin}>github</button>
+            <button>github</button>
           </li>
         </ul>
       </section>
