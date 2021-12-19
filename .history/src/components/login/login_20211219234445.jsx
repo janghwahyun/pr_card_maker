@@ -7,6 +7,7 @@ const Login = ({ authService }) => {
     authService //
       .login(event.currentTarget.textContent)
       .then(console.log);
+    console.log('event.currentTarget.textContent');
   };
 
   return (
@@ -16,10 +17,10 @@ const Login = ({ authService }) => {
         <h1>Login</h1>
         <ul>
           <li>
-            <button onClick={onLogin}>Google</button>
+            <button onClick={onLogin}>google</button>
           </li>
           <li>
-            <button onClick={onLogin}>Github</button>
+            <button onClick={onLogin}>github</button>
           </li>
         </ul>
       </section>

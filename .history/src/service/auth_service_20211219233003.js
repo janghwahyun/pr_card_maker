@@ -1,6 +1,6 @@
 import firebase from 'firebase';
-import 'firebase/auth';
 import firebaseApp from './firebase';
+import 'firebase/auth';
 
 // providername자리에 페이스북, 인스타그램인지르 받아옴...
 class AuthService {
