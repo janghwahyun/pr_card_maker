@@ -1,9 +1,9 @@
+import './app.css';
 import Login from './components/login/login';
-import styles from './app.module.css';
 
 function App({ authService }) {
   return (
-    <div className={styles.app}>
+    <div>
       <Login authService={authService} />
     </div>
   );

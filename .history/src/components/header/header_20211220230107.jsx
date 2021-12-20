@@ -9,7 +9,7 @@ const Header = ({ onLogout }) => (
       </button>
     )}
     <img className={styles.logo} src="/images/chita2.png" alt="logo" />
-    <h1 className={styles.title}>Business Card</h1>
+    <h1 className={styles.title}>MakerCard</h1>
   </header>
 );
 export default Header;

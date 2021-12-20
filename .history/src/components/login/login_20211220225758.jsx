@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../header/header';
 import Footer from '../footer/footer';
-import styles from './login.module.css';
 
 const Login = ({ authService }) => {
   const onLogin = event => {
@@ -11,20 +10,16 @@ const Login = ({ authService }) => {
   };
 
   return (
-    <section className={styles.login}>
+    <section className={StyleSheet.}>
       <Header />
       <section>
         <h1>Login</h1>
-        <ul className={styles.list}>
-          <li className={styles.item}>
-            <button className={styles.button} onClick={onLogin}>
-              Google
-            </button>
+        <ul>
+          <li>
+            <button onClick={onLogin}>Google</button>
           </li>
-          <li className={styles.item}>
-            <button className={styles.button} onClick={onLogin}>
-              Github
-            </button>
+          <li>
+            <button onClick={onLogin}>Github</button>
           </li>
         </ul>
       </section>

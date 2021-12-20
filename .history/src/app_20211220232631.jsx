@@ -1,5 +1,6 @@
+import './app.css';
 import Login from './components/login/login';
-import styles from './app.module.css';
+import styles from './app.mopdule.css';
 
 function App({ authService }) {
   return (

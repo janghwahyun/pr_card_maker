@@ -22,7 +22,7 @@ const Login = ({ authService }) => {
             </button>
           </li>
           <li className={styles.item}>
-            <button className={styles.button} onClick={onLogin}>
+            <button clasname={styles.button} onClick={onLogin}>
               Github
             </button>
           </li>

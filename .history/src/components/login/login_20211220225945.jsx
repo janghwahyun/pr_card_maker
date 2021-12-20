@@ -22,9 +22,7 @@ const Login = ({ authService }) => {
             </button>
           </li>
           <li className={styles.item}>
-            <button className={styles.button} onClick={onLogin}>
-              Github
-            </button>
+            <button onClick={onLogin}>Github</button>
           </li>
         </ul>
       </section>
