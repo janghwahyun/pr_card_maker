@@ -9,7 +9,8 @@
 }
 
 .logo {
-  width: 100%;
+  width: 10em;
+  height: 10em;
 }
 
 .title {
@@ -20,7 +21,7 @@
 .logout {
   position: absolute;
   right: 3em;
-  top: 2em;
+  top: 1em;
   padding: 0.8em;
   border-radius: 20%;
   background-color: makerBlack;

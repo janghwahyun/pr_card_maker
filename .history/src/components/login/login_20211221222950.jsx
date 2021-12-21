@@ -16,12 +16,8 @@ const Login = ({ authService }) => {
       .login(event.currentTarget.textContent)
       .then(data => goToMaker(data.user.uid));
   };
-  //컴포넌트가 업데이트 될 때
-  useEffect(() => {
-    authService.onAuthChange(user => {
-      user && goToMaker(user.uid);
-    });
-  });
+
+  useEffect(() => {});
 
   return (
     <section className={styles.login}>

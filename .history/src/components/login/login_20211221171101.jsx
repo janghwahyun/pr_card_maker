@@ -1,27 +1,20 @@
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 import styles from './login.module.css';
-import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Login = ({ authService }) => {
-  const navigator = useNavigate();
-  const goToMaker = userId => {
-    navigator({ pathname: '/maker', state: { id: userId } });
+  const history = useHistory();
+  const goToMaker = () => {
+    history.push('/maker');
   };
 
-  // then 다음 콘솔로그대신해 로그인이 완료되면, data를 받아 gotomaker 함수를 실행
   const onLogin = event => {
     authService //
       .login(event.currentTarget.textContent)
-      .then(data => goToMaker(data.user.uid));
+      .then(console.log);
   };
-  //컴포넌트가 업데이트 될 때
-  useEffect(() => {
-    authService.onAuthChange(user => {
-      user && goToMaker(user.uid);
-    });
-  });
 
   return (
     <section className={styles.login}>

@@ -9,7 +9,7 @@ const Header = ({ onLogout }) => (
       </button>
     )}
     <img className={styles.logo} src="/images/chita2.png" alt="logo" />
-    <h1 className={styles.title}>팧핳하핳하하</h1>
+    <h1 className={styles.title}>웃자고~</h1>
   </header>
 );
 export default Header;

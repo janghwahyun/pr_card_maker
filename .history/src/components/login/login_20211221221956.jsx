@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 import styles from './login.module.css';
-import { useEffect } from 'react';
 
 const Login = ({ authService }) => {
   const navigator = useNavigate();
@@ -16,12 +15,6 @@ const Login = ({ authService }) => {
       .login(event.currentTarget.textContent)
       .then(data => goToMaker(data.user.uid));
   };
-  //컴포넌트가 업데이트 될 때
-  useEffect(() => {
-    authService.onAuthChange(user => {
-      user && goToMaker(user.uid);
-    });
-  });
 
   return (
     <section className={styles.login}>
