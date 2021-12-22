@@ -41,7 +41,7 @@ const Login = ({ authService }) => {
           </li>
           <li className={styles.item}>
             <button className={styles.button} onClick={onLogin}>
-              Facebook
+              Twitter
             </button>
           </li>
         </ul>
