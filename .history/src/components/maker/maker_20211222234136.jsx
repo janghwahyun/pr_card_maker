@@ -59,8 +59,8 @@ const Maker = ({ authService }) => {
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor cards={cards} />
-        <Preview cards={cards} />
+        <Editor card={card} />
+        <Preview card={card} />
       </div>
       <Footer />
     </section>

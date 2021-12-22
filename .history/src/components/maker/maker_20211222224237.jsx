@@ -9,36 +9,35 @@ import Editor from '../editor/editor';
 import Preview from '../preview/preview';
 
 const Maker = ({ authService }) => {
-  const [cards, setCards] = useState([
+  const [card, setCards] = useState([
     {
       id: '1',
       name: '1117jhh',
-      theme: 'light',
+      theme:'light',
       title: 'Web Designer',
-      email: '1117jhh@gmail.com',
-      message: 'go for it',
-      fileName: 'jang',
-      fileURL: '',
-    },
-    {
+      email:'1117jhh@gmail.com',
+      message:'go for it',
+      fileName:'jang',
+      fileURL:'',
+        {
       id: '2',
       name: '1117jhh2',
-      theme: 'light',
+      theme:'light',
       title: 'Web Designer',
-      email: '1117jhh@gmail.com',
-      message: 'go for it',
-      fileName: 'jang',
-      fileURL: '',
+      email:'1117jhh@gmail.com',
+      message:'go for it',
+      fileName:'jang',
+      fileURL:'',
     },
-    {
+      {
       id: '3',
       name: '1117jhh3',
-      theme: 'light',
+      theme:'light',
       title: 'Web Designer',
-      email: '1117jhh@gmail.com',
-      message: 'go for it',
-      fileName: 'jang',
-      fileURL: '',
+      email:'1117jhh@gmail.com',
+      message:'go for it',
+      fileName:'jang',
+      fileURL:'',
     },
   ]);
 
@@ -59,8 +58,8 @@ const Maker = ({ authService }) => {
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor cards={cards} />
-        <Preview cards={cards} />
+        <Editor card={card}/>
+        <Preview card={card}/>
       </div>
       <Footer />
     </section>
