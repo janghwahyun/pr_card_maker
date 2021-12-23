@@ -27,16 +27,5 @@ const Card = ({ card }) => {
     </li>
   );
 };
-//팀별로 색깔 바꾸기
-function getStyles(theme){
-	case 'dark':
-		return styles.dark;
-	case 'light':
-		return styles.light;
-			case 'colorful':
-		return styles.colorful;
-		default:
-			throw new Error(`unknown theme: ${theme}`);
-}
 
 export default Card;

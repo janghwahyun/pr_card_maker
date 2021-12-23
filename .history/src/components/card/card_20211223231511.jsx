@@ -31,12 +31,7 @@ const Card = ({ card }) => {
 function getStyles(theme){
 	case 'dark':
 		return styles.dark;
-	case 'light':
-		return styles.light;
-			case 'colorful':
-		return styles.colorful;
-		default:
-			throw new Error(`unknown theme: ${theme}`);
+		
 }
 
 export default Card;

@@ -18,7 +18,7 @@ const Maker = ({ authService }) => {
       email: '1117jhh@gmail.com',
       message: 'go for it',
       fileName: 'jang',
-      fileURL: null,
+      fileURL: 'null',
     },
     {
       id: '2',
@@ -38,7 +38,7 @@ const Maker = ({ authService }) => {
       email: '1117jhh@gmail.com',
       message: 'go for it',
       fileName: 'jang',
-      fileURL: null,
+      fileURL: 'null',
     },
   ]);
 
