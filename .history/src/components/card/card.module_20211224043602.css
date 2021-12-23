@@ -1,7 +1,6 @@
 @value makerBlack, makerWhite, makerShodow, makerColorful, makerWheat from '../../common/colors.css';
 
 .card {
-  width: 100%;
   display: flex;
   align-items: center;
   border-radius: 1em;
@@ -51,9 +50,8 @@
 
 .company::after {
   content: '';
-  display: block;
+  display: black;
   width: 90%;
   height: 2px;
   background-color: makerWheat;
-  transform: translateY(0.4em);
 }

@@ -15,9 +15,9 @@ const Card = ({ card }) => {
   } = card;
 
   const url = fileURL || DEFAULT_IMAGE;
-
   return (
-    <li className={`${styles.card} ${getStyles(theme)}`}>
+
+    <li className={`${styles.card} ${getStyles(theme)}`}}>
       <img className={styles.avatar} src={url} alt="default photo" />
       <div className={styles.info}>
         <h1 className={styles.name}>{name}</h1>
@@ -28,20 +28,20 @@ const Card = ({ card }) => {
       </div>
     </li>
   );
-};
+  };
 
 //팀별로 색깔 바꾸기
-function getStyles(theme) {
-  switch (theme) {
-    case 'dark':
-      return styles.dark;
-    case 'light':
-      return styles.light;
-    case 'colorful':
-      return styles.colorful;
-    default:
-      throw new Error(`unknown theme: ${theme}`);
-  }
+function getStyles(theme){
+	switch (theme) {	
+		case 'dark':
+		return styles.dark;
+	case 'light':
+		return styles.light;
+			case 'colorful':
+		return styles.colorful;
+		default:
+			throw new Error(`unknown theme: ${theme}`);
+		}
 }
 
 export default Card;
