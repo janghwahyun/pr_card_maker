@@ -49,10 +49,8 @@ const CardEditForm = ({ card }) => {
         value={email}
       ></input>
       <textarea className={styles.textarea} nput />
-      <div className={styles.fileInput}>
-        <imageFileInput />
-      </div>
-
+      <div className={styles.fileInput}></div>
+      <imageFileInput />
       <Button name="Delete" onSubmit={onsubmit} />
     </form>
   );

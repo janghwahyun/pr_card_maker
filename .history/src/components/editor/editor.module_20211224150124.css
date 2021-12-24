@@ -3,7 +3,7 @@
 .editor {
   flex-basis: 50%;
   background-color: wheat;
-  border-right: 1px solid black;
+  border-right: 1px solid makerLightGrey;
   background-color: makerLightGrey;
 }
 

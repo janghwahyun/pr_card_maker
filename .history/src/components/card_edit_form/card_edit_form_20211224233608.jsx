@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './card_edit_form_module.css';
 
+import Button from '../ button/button';
 import imageFileInput from '../image_file_input/image_file_input';
-import Button from '../button/button';
 
 const CardEditForm = ({ card }) => {
   const {
@@ -16,7 +16,6 @@ const CardEditForm = ({ card }) => {
     fileURL,
   } = card;
   const onSubmit = () => {};
-
   return (
     <form className={styles.form}>
       <input
@@ -25,35 +24,17 @@ const CardEditForm = ({ card }) => {
         name="name"
         value={name}
       ></input>
-      <input
-        className={styles.input}
-        type="text"
-        name="company"
-        value={company}
-      ></input>
-      <select className={styles.select} name="theme" value={theme}>
+      <input type="text" name="company" value={company}></input>
+      <select name="theme" value={theme}>
         <option value="light">light</option>
         <option value="dart">dart</option>
         <option value="colorful">colorful</option>
       </select>
-      <input
-        className={styles.input}
-        type="text"
-        name="title"
-        value={title}
-      ></input>
-      <input
-        className={styles.input}
-        type="text"
-        name="email"
-        value={email}
-      ></input>
-      <textarea className={styles.textarea} nput />
-      <div className={styles.fileInput}>
-        <imageFileInput />
-      </div>
-
-      <Button name="Delete" onSubmit={onsubmit} />
+      <input type="text" name="title" value={title}></input>
+      <input type="text" name="email" value={email}></input>
+      <textarea name="message" value={message}></textarea>
+      <imageFileInput />
+      <Button name="Delete" onClick={onSubmit} />
     </form>
   );
 };

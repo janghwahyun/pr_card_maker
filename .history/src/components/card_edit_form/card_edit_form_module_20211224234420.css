@@ -1,0 +1,6 @@
+@value from '../../common/colors.css';
+
+.form {
+  display: flex;
+  width: 100%;
+}
