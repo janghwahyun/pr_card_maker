@@ -1,11 +1,20 @@
 import React from 'react';
-import styles from './card_edit_form.module.css';
+import styles from './card_edit_form_module.css';
 
 import Button from '../button/button';
-import ImageFileInput from '../image_file_input/image_file_input';
+import imageFileInput from '../image_file_input/image_file_input';
 
 const CardEditForm = ({ card }) => {
-  const { name, company, title, email, message, theme } = card;
+  const {
+    name,
+    company,
+    title,
+    email,
+    message,
+    theme,
+    fileName,
+    fileURL,
+  } = card;
 
   const onSubmit = () => {};
 
@@ -44,6 +53,7 @@ const CardEditForm = ({ card }) => {
       <div className={styles.fileInput}>
         <ImageFileInput />
       </div>
+
       <Button name="Delete" onSubmit={onSubmit} />
     </form>
   );

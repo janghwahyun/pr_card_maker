@@ -1,4 +1,4 @@
-@value makerBlack, makerWhite from '../../common/colors.css';
+@value makerBlack, makerWhite from '../../cmmon/colors.css';
 
 .form {
   display: flex;
@@ -22,4 +22,25 @@
   border-bottom: 1px solid makerBlack;
   border-right: 1px soild makerBlack;
   background: makerWhite;
+}
+
+.input,
+.select {
+  flex: 1 1 30%;
+}
+
+.fileInput {
+  padding: 0;
+  flex: 1 1 50%;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus,
+.button:focus {
+  outline: 0;
+}
+
+.textarea {
+  flex-basis: 100%;
 }
