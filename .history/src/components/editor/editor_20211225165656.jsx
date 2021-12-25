@@ -10,7 +10,7 @@ const Editor = ({ cards, addCard }) => (
     {cards.map(card => (
       <CardEditForm key={card.id} card={card} />
     ))}
-    <CardAddForm onAdd={addCard} />
+    <CardAddForm onSubmit={addCard} />
   </section>
 );
 

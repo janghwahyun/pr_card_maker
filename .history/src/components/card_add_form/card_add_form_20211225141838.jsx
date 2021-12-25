@@ -44,7 +44,7 @@ const CardEditForm = ({ card }) => {
       <div className={styles.fileInput}>
         <ImageFileInput />
       </div>
-      <Button name="Delete" onClick={onSubmit} />
+      <Button name="Delete" onSubmit={onSubmit} />
     </form>
   );
 };

@@ -57,12 +57,9 @@ const Maker = ({ authService }) => {
       }
     });
   });
-
-  const addCard = card => {
-    // cards를 복사해오고 card라는 추가할거만 추가해 주면 됨.
-    const updated = [...cards, card];
-    setCards(updated);
-  };
+  addCard(card)=>{
+    console.log(card);
+  }
 
   return (
     <section className={styles.maker}>

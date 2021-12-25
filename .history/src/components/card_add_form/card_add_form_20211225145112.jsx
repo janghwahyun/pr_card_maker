@@ -1,12 +1,10 @@
 import React from 'react';
-import styles from './card_edit_form.module.css';
+import styles from './card_add_form.module.css';
 
 import Button from '../button/button';
 import ImageFileInput from '../image_file_input/image_file_input';
 
-const CardEditForm = ({ card }) => {
-  const { name, company, title, email, message, theme } = card;
-
+const CardAddForm = () => {
   const onSubmit = () => {};
 
   return (
@@ -15,38 +13,38 @@ const CardEditForm = ({ card }) => {
         className={styles.input}
         type="text"
         name="name"
-        value={name}
+        placeholder="Name"
       ></input>
       <input
         className={styles.input}
         type="text"
         name="company"
-        value={company}
+        placeholder="Company"
       ></input>
-      <select className={styles.select} name="theme" value={theme}>
-        <option value="light">light</option>
-        <option value="dart">dart</option>
-        <option value="colorful">colorful</option>
+      <select className={styles.select} name="theme" placeholder="Theme">
+        <option placeholder="light">light</option>
+        <option placeholder="dart">dart</option>
+        <option placeholder="colorful">colorful</option>
       </select>
       <input
         className={styles.input}
         type="text"
         name="title"
-        value={title}
+        placeholder="Title"
       ></input>
       <input
         className={styles.input}
         type="text"
         name="email"
-        value={email}
+        placeholder="Email"
       ></input>
-      <textarea className={styles.textarea} value={message} />
+      <textarea className={styles.textarea} placeholder="Message" />
       <div className={styles.fileInput}>
         <ImageFileInput />
       </div>
-      <Button name="Delete" onClick={onSubmit} />
+      <Button name="Delete" onSubmit={onSubmit} />
     </form>
   );
 };
 
-export default CardEditForm;
+export default CardAddForm;
