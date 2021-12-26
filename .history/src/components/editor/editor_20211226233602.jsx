@@ -10,7 +10,7 @@ const Editor = ({ cards, addCard, updatedCard, deleteCard }) => (
     {Object.keys(cards).map(key => (
       <CardEditForm
         key={key}
-        card={cards[key]}
+        card={card}
         updatedCard={updatedCard}
         deleteCard={deleteCard}
       />

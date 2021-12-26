@@ -5,11 +5,11 @@ import Card from '../card/card';
 const Preview = ({ cards }) => (
   <section className={styles.preview}>
     <h1 className={styles.title}>preview</h1>
-    <ul className={styles.cards}>
-      {Object.keys[cards].map(key => (
-        <Card key={key} card={cards[key]} />
+    <li className={styles.cards}>
+      {Object.keys[cards].map(card => (
+        <Card card={card} />
       ))}
-    </ul>
+    </li>
   </section>
 );
 

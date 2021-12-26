@@ -9,8 +9,8 @@ import Editor from '../editor/editor';
 import Preview from '../preview/preview';
 
 const Maker = ({ authService }) => {
-  const [cards, setCards] = useState({
-    1: {
+  const [cards, setCards] = useState([
+    {
       id: '1',
       name: '1117jhh',
       theme: 'dark',
@@ -21,7 +21,7 @@ const Maker = ({ authService }) => {
       fileName: 'jang',
       fileURL: null,
     },
-    2: {
+    {
       id: '2',
       name: '1117jhh2',
       theme: 'light',
@@ -32,7 +32,7 @@ const Maker = ({ authService }) => {
       fileName: 'jang',
       fileURL: 'jang.png',
     },
-    3: {
+    {
       id: '3',
       name: '1117jhh3',
       theme: 'colorful',
@@ -43,7 +43,7 @@ const Maker = ({ authService }) => {
       fileName: 'jang',
       fileURL: null,
     },
-  });
+  ]);
 
   const navigator = useNavigate();
   const onLogout = () => {
@@ -63,12 +63,6 @@ const Maker = ({ authService }) => {
     const updated = [...cards, card];
     setCards(updated);
   };
-  const updatedCard = card => {
-    const updated = { ...cards };
-    updated[card.id] = card;
-    setCards(updated);
-  };
-  const deleteCard = card => {};
 
   return (
     <section className={styles.maker}>

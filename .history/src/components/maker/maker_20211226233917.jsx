@@ -68,7 +68,9 @@ const Maker = ({ authService }) => {
     updated[card.id] = card;
     setCards(updated);
   };
-  const deleteCard = card => {};
+  const deleteCard = card => {
+    console.log(card);
+  };
 
   return (
     <section className={styles.maker}>

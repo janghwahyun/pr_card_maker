@@ -7,13 +7,8 @@ import CardAddForm from '../card_add_form/card_add_form';
 const Editor = ({ cards, addCard, updatedCard, deleteCard }) => (
   <section className={styles.editor}>
     <h1 className={styles.title}>editor</h1>
-    {Object.keys(cards).map(key => (
-      <CardEditForm
-        key={key}
-        card={cards[key]}
-        updatedCard={updatedCard}
-        deleteCard={deleteCard}
-      />
+    {cards.map(card => (
+      <CardEditForm key={card.id} card={card} />
     ))}
     <CardAddForm onAdd={addCard} />
   </section>

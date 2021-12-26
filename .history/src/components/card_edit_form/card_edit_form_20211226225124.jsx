@@ -11,10 +11,9 @@ const CardEditForm = ({ card, updatedCard, deleteCard }) => {
     if (event.currentTarget === null) {
       return;
     }
-    event.preventDefault();
-    updatedCard({
+    event.preventDefault({
       ...card,
-      [event.currentTarget.name]: event.currentTarget.value,
+      [event.currentTarget.name]: event.currentTarget.value;
     });
   };
   const onSubmit = () => {};

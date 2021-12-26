@@ -12,10 +12,10 @@ const CardEditForm = ({ card, updatedCard, deleteCard }) => {
       return;
     }
     event.preventDefault();
-    updatedCard({
+    updatedCard({{
       ...card,
       [event.currentTarget.name]: event.currentTarget.value,
-    });
+    }});
   };
   const onSubmit = () => {};
 

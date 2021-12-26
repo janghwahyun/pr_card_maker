@@ -39,7 +39,8 @@
 .select:focus,
 .button:focus {
   outline: 0;
-  background-color: lightgray;
+  background-color: rebeccapurple;
+  color: yellow;
 }
 
 .textarea {

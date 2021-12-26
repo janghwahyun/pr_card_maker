@@ -41,6 +41,7 @@ const CardAddForm = ({ onAdd }) => {
         type="text"
         name="name"
         placeholder="Name"
+        onChange={onChange}
       ></input>
       <input
         ref={companyRef}
@@ -48,12 +49,14 @@ const CardAddForm = ({ onAdd }) => {
         type="text"
         name="company"
         placeholder="Company"
+        onChange={onChange}
       ></input>
       <select
         ref={themeRef}
         className={styles.select}
         name="theme"
         placeholder="Theme"
+        onChange={onChange}
       >
         <option placeholder="light">light</option>
         <option placeholder="dark">dark</option>
@@ -65,6 +68,7 @@ const CardAddForm = ({ onAdd }) => {
         type="text"
         name="title"
         placeholder="Title"
+        onChange={onChange}
       ></input>
       <input
         ref={emailRef}
@@ -72,12 +76,14 @@ const CardAddForm = ({ onAdd }) => {
         type="text"
         name="email"
         placeholder="Email"
+        onChange={onChange}
       ></input>
       <textarea
         ref={messageRef}
         className={styles.textarea}
         name="message"
         placeholder="Message"
+        onChange={onChange}
       />
       <div className={styles.fileInput}>
         <ImageFileInput />

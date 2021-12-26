@@ -64,11 +64,11 @@ const Maker = ({ authService }) => {
     setCards(updated);
   };
   const updatedCard = card => {
-    const updated = { ...cards };
-    updated[card.id] = card;
-    setCards(updated);
+    console.log(card);
   };
-  const deleteCard = card => {};
+  const deleteCard = card => {
+    console.log(card);
+  };
 
   return (
     <section className={styles.maker}>

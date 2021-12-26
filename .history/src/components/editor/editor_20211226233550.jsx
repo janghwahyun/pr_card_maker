@@ -9,8 +9,8 @@ const Editor = ({ cards, addCard, updatedCard, deleteCard }) => (
     <h1 className={styles.title}>editor</h1>
     {Object.keys(cards).map(key => (
       <CardEditForm
-        key={key}
-        card={cards[key]}
+        key={card.id}
+        card={card}
         updatedCard={updatedCard}
         deleteCard={deleteCard}
       />

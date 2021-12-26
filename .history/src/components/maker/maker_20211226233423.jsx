@@ -30,7 +30,7 @@ const Maker = ({ authService }) => {
       email: '1117jhh@gmail.com',
       message: 'go for it',
       fileName: 'jang',
-      fileURL: 'jang.png',
+      fileURL: 'null',
     },
     3: {
       id: '3',
@@ -40,7 +40,7 @@ const Maker = ({ authService }) => {
       company: 'daum',
       email: '1117jhh@gmail.com',
       message: 'go for it',
-      fileName: 'jang',
+      fileName: null,
       fileURL: null,
     },
   });
@@ -64,11 +64,11 @@ const Maker = ({ authService }) => {
     setCards(updated);
   };
   const updatedCard = card => {
-    const updated = { ...cards };
-    updated[card.id] = card;
-    setCards(updated);
+    console.log(card);
   };
-  const deleteCard = card => {};
+  const deleteCard = card => {
+    console.log(card);
+  };
 
   return (
     <section className={styles.maker}>
