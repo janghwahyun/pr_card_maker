@@ -58,26 +58,17 @@ const Maker = ({ authService }) => {
     });
   });
 
-  // const addCard = card => {
-  //   // cards를 복사해오고 card라는 추가할거만 추가해 주면 됨.
-  //   const updated = [...cards, card];
-  //   setCards(updated);
-  // };
-  const createOrupdatedCard = card => {
-    setCards(cards => {
-      const updated = { ...cards };
-      updated[card.id] = card;
-      return updated;
-    });
+  const addCard = card => {
+    // cards를 복사해오고 card라는 추가할거만 추가해 주면 됨.
+    const updated = [...cards, card];
+    setCards(updated);
   };
-
-  const deleteCard = card => {
-    setCards(cards => {
-      const updated = { ...cards };
-      delete updated[card.id];
-      return updated;
-    });
+  const updatedCard = card => {
+    const updated = [...cards];
+    updated[card.id] = card;
+    setCards(updated);
   };
+  const deleteCard = card => {};
 
   return (
     <section className={styles.maker}>
@@ -85,8 +76,8 @@ const Maker = ({ authService }) => {
       <div className={styles.container}>
         <Editor
           cards={cards}
-          addCard={createOrupdatedCard}
-          updatedCard={createOrupdatedCard}
+          addCard={addCard}
+          updatedCard={updatedCard}
           deleteCard={deleteCard}
         />
         <Preview cards={cards} />
