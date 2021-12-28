@@ -80,7 +80,7 @@ const CardAddForm = ({ FileInput, onAdd }) => {
         placeholder="Message"
       />
       <div className={styles.fileInput}>
-        <FileInput />
+        <ImageFileInput />
       </div>
       <Button name="ADD" onClick={onSubmit} />
     </form>

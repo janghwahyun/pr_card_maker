@@ -2,8 +2,7 @@ import React from 'react';
 import styles from './card_edit_form.module.css';
 
 import Button from '../button/button';
-// 직접적으로 받아오지 않아도 되겠죠?
-// import ImageFileInput from '../image_file_input/image_file_input';
+import ImageFileInput from '../image_file_input/image_file_input';
 
 const CardEditForm = ({ FileInput, card, updatedCard, deleteCard }) => {
   const { name, company, title, email, message, theme } = card;
@@ -66,7 +65,7 @@ const CardEditForm = ({ FileInput, card, updatedCard, deleteCard }) => {
         onChange={onChange}
       />
       <div className={styles.fileInput}>
-        <FileInput />
+        <ImageFileInput />
       </div>
       <Button name="Delete" onClick={onSubmit} />
     </form>

@@ -9,10 +9,7 @@ function App({ FileInput, authService }) {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login authService={authService} />} />
-          <Route
-            path="/maker"
-            element={<Maker FileInput={FileInput} authService={authService} />}
-          />
+          <Route path="/maker" element={<Maker authService={authService} />} />
         </Routes>
       </BrowserRouter>
     </div>

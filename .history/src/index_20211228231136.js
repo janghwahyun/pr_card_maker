@@ -9,16 +9,17 @@ import ImageFileInput from './components/image_file_input/image_file_input';
 
 const authService = new AuthService();
 const imageUploader = new ImageUploader();
-// const FileInput =
-//   <ImageFileInput {...props} imageUpLoader={imageUploader} />
-// );
-const FileInput = props => (
-  <ImageFileInput {...props} imageUpLoader={imageUploader} />
+const FileInput = (proprs) => (
+  <ImageFileInput {...props} imageUpLoader={imageUploader}
 );
+
+사용자가 원하는 props를 전달하면
+
+cosnt FileInput
 
 ReactDOM.render(
   <React.StrictMode>
-    <App authService={authService} FileInput={FileInput} />
+    <App authService={authService} />
   </React.StrictMode>,
   document.getElementById('root')
 );
