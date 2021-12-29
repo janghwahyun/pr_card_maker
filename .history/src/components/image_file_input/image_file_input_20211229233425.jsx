@@ -5,14 +5,13 @@ import styles from './image_file_input.module.css';
 const ImageFileInput = ({ imageUpLoader, name, onFileChange }) => {
   // onButtonClick을 누르면 input이 클릭이 된거 처럼 해야하니까
   const inputRef = useRef();
-  const onButtonClick = event => {
+  const onButtonClick = () => {
     event.preventDefault();
     inputRef.current.click();
   };
 
   const onChange = event => {
     console.log(event.target.files[0]);
-    imageUpLoader.upload(event.target.files[0]).then(console.log);
   };
   return (
     <div className={styles.container}>

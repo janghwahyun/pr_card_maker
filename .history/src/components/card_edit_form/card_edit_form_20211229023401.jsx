@@ -43,7 +43,7 @@ const CardEditForm = ({ FileInput, card, updatedCard, deleteCard }) => {
         onChange={onChange}
       >
         <option value="light">light</option>
-        <option value="dark">dark</option>
+        <option value="darkl">dark</option>
         <option value="colorful">colorful</option>
       </select>
       <input

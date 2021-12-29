@@ -12,7 +12,6 @@ const ImageFileInput = ({ imageUpLoader, name, onFileChange }) => {
 
   const onChange = event => {
     console.log(event.target.files[0]);
-    imageUpLoader.upload(event.target.files[0]).then(console.log);
   };
   return (
     <div className={styles.container}>
