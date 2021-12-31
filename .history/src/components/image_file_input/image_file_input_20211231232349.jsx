@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+
 import styles from './image_file_input.module.css';
 
 const ImageFileInput = ({ imageUpLoader, name, onFileChange }) => {
@@ -11,14 +12,13 @@ const ImageFileInput = ({ imageUpLoader, name, onFileChange }) => {
 
   const onChange = event => {
     console.log(event.target.files[0]);
-    const uploaded = imageUpLoader.upload(event.target.files[0]);
-    console.log(uploaded);
-    // onFileChange({
-    // 	name:'fileName',
-    // 	url: 'url'
-    // });
+	const uploaded= await imageUpLoader.upload(event.target.files[0]);
+	console.log(uploaded);
+	// onFileChange({
+	// 	name:'fileName',
+	// 	url: 'url'
+	// });
   };
-
   return (
     <div className={styles.container}>
       <input
