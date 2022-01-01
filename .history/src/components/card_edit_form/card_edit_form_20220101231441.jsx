@@ -9,14 +9,6 @@ import Button from '../button/button';
 const CardEditForm = ({ FileInput, card, updatedCard, deleteCard }) => {
   const { name, company, title, email, message, theme } = card;
 
-  const onFileChange = file => {
-    updatedCard({
-      ...card,
-      fileName: file.name,
-      fileURL: file.url,
-    });
-  };
-
   const onChange = event => {
     if (event.currentTarget === null) {
       return;
@@ -75,7 +67,7 @@ const CardEditForm = ({ FileInput, card, updatedCard, deleteCard }) => {
         onChange={onChange}
       />
       <div className={styles.fileInput}>
-        <FileInput name={name} onFileChange={onFileChange} />
+        <FileInput onFileChange={onFileChange} />
       </div>
       <Button name="Delete" onClick={onSubmit} />
     </form>

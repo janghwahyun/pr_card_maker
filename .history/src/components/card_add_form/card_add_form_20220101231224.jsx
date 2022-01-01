@@ -15,7 +15,6 @@ const CardAddForm = ({ FileInput, onAdd }) => {
   const [file, setFile] = useState({ fileName: null, fileURL: null });
 
   const onFileChange = file => {
-    console.log(file);
     setFile({
       fileName: file.name,
       fileURL: file.url,
@@ -39,7 +38,6 @@ const CardAddForm = ({ FileInput, onAdd }) => {
     };
     //form을 작성하면 reset이 된다.
     formRef.current.reset();
-    setFile({ fileName: null, fileURL: null });
     onAdd(card);
   };
 
@@ -90,7 +88,7 @@ const CardAddForm = ({ FileInput, onAdd }) => {
         placeholder="Message"
       />
       <div className={styles.fileInput}>
-        <FileInput name={file.fileName} onFileChange={onFileChange} />
+        <FileInput />
       </div>
       <Button name="ADD" onClick={onSubmit} />
     </form>

@@ -39,7 +39,7 @@ const CardAddForm = ({ FileInput, onAdd }) => {
     };
     //form을 작성하면 reset이 된다.
     formRef.current.reset();
-    setFile({ fileName: null, fileURL: null });
+    setFile({ fileName: null, fileURL: nul });
     onAdd(card);
   };
 

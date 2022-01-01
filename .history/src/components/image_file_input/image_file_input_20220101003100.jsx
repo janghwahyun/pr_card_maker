@@ -10,7 +10,7 @@ const ImageFileInput = ({ imageUpLoader, name, onFileChange }) => {
     inputRef.current.click();
   };
 
-  const onChange = async event => {
+  const onChange = event => {
     console.log(event.target.files[0]);
     const uploaded = await imageUpLoader.upload(event.target.files[0]);
     console.log(uploaded);

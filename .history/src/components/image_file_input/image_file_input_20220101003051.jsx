@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 
+import axios from "axios";
 import styles from './image_file_input.module.css';
 
 const ImageFileInput = ({ imageUpLoader, name, onFileChange }) => {
@@ -10,7 +11,7 @@ const ImageFileInput = ({ imageUpLoader, name, onFileChange }) => {
     inputRef.current.click();
   };
 
-  const onChange = async event => {
+  const onChange = event => {
     console.log(event.target.files[0]);
     const uploaded = await imageUpLoader.upload(event.target.files[0]);
     console.log(uploaded);

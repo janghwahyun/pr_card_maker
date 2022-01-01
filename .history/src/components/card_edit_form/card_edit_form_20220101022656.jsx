@@ -2,20 +2,11 @@ import React from 'react';
 import styles from './card_edit_form.module.css';
 
 import Button from '../button/button';
-
 // 직접적으로 받아오지 않아도 되겠죠?
 // import ImageFileInput from '../image_file_input/image_file_input';
 
 const CardEditForm = ({ FileInput, card, updatedCard, deleteCard }) => {
   const { name, company, title, email, message, theme } = card;
-
-  const onFileChange = file => {
-    updatedCard({
-      ...card,
-      fileName: file.name,
-      fileURL: file.url,
-    });
-  };
 
   const onChange = event => {
     if (event.currentTarget === null) {
@@ -75,7 +66,7 @@ const CardEditForm = ({ FileInput, card, updatedCard, deleteCard }) => {
         onChange={onChange}
       />
       <div className={styles.fileInput}>
-        <FileInput name={name} onFileChange={onFileChange} />
+        <FileInput onFileChange={onFileChange} />
       </div>
       <Button name="Delete" onClick={onSubmit} />
     </form>
