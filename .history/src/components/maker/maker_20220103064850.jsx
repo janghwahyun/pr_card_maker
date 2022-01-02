@@ -10,9 +10,8 @@ import Preview from '../preview/preview';
 
 const Maker = ({ FileInput, authService, cardRepository }) => {
   const [cards, setCards] = useState({});
-  const location = useLocation().state;
-  const locationState = location?.state;
-  const [userId, setUserId] = useState(locationState && locationState.id);
+  const historyState = useLocation().state;
+  const [userId, setUserId] = useState(historyState && historyState.id);
 
   const navigator = useNavigate();
   const onLogout = () => {
@@ -51,7 +50,6 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       delete updated[card.id];
       return updated;
     });
-    cardRepository.deleteCard(userId, card);
   };
 
   return (

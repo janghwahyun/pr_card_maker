@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useHistory } from 'react';
 
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import styles from './maker.module.css';
 import Footer from '../footer/footer';
 import Header from '../header/header';
 import Editor from '../editor/editor';
 import Preview from '../preview/preview';
+import CardRepository from '../service/card_repository';
 
 const Maker = ({ FileInput, authService, cardRepository }) => {
   const [cards, setCards] = useState({});
-  const location = useLocation().state;
-  const locationState = location?.state;
-  const [userId, setUserId] = useState(locationState && locationState.id);
+  const historyState = useHistory().state;
+  const [userId, setUserId] = useState(historyState && historyState.id);
 
   const navigator = useNavigate();
   const onLogout = () => {
@@ -51,7 +51,6 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       delete updated[card.id];
       return updated;
     });
-    cardRepository.deleteCard(userId, card);
   };
 
   return (

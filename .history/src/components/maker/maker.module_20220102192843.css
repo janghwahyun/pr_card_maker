@@ -8,12 +8,12 @@
   display: flex;
   flex-direction: column;
   /* background-color: makerWhite; */
+  overflow-y: auto;
 }
 
 .container {
   display: flex;
   flex: 1;
-  min-height: 0;
 }
 
 @media screen and (max-width: mediaQuery) {
