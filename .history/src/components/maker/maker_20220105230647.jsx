@@ -23,11 +23,11 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     if (!userId) {
       return;
     }
-    const stopSync = cardRepository.syncCards(userId, cards => {
+    cardRepository.syncCards(userId, cards => {
       setCards(cards);
     });
-    return () => stopSync();
-  }, [userId]);
+    return () => {};
+  }[userId]);
 
   //useffect에 장점은 로직별로 만들 수 있음에 있다. 마운트가 되었을 때, 사용자 아이디가 변경 되었을 때, 쓸거임.
   useEffect(() => {
