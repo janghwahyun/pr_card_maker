@@ -3,7 +3,7 @@ import { firebaseAuth, githubProvider, googleProvider } from './firebase';
 // providername자리에 페이스북, 인스타그램인지르 받아옴...
 class AuthService {
   login(providerName) {
-    const authProvider = this.getProvider(providerName);
+    const authProvider = getProvider(providerName);
     return firebaseAuth.signInWithPopup(authProvider);
   }
 

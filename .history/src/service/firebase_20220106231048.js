@@ -14,8 +14,3 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 // 필요한것만 export
 // export default firebaseApp;
-
-export const firebaseAuth = firebaseApp.auth();
-export const firebaseDatabase = firebaseApp.database();
-export const googleProvider = new firebase.auth.GoogleAuthProvider();
-export const githubProvider = new firebase.auth.GithubAuthProvider();

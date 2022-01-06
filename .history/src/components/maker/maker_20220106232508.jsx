@@ -39,7 +39,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
         navigator('/');
       }
     });
-  }, [authService, userId, navigator]);
+  }, [authService]);
 
   // const addCard = card => {
   //   // cards를 복사해오고 card라는 추가할거만 추가해 주면 됨.
