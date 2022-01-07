@@ -1,8 +1,9 @@
-import React, { memo } from 'react';
+import React from 'react';
 import styles from './card.module.css';
 
 const DEFAULT_IMAGE = '/images/default.jpeg';
-const Card = memo(({ card }) => {
+const Card = memo(
+  ({ card }) => {
   const { name, company, title, email, message, theme, fileURL } = card;
 
   const url = fileURL || DEFAULT_IMAGE;
@@ -19,8 +20,9 @@ const Card = memo(({ card }) => {
       </div>
     </li>
   );
-});
+};
 
+);
 //팀별로 색깔 바꾸기
 function getStyles(theme) {
   switch (theme) {

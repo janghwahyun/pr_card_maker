@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
@@ -15,9 +15,11 @@ const imageUploader = new ImageUploader();
 // 이렇게 관리하는것보다 밑으로 관리하는것이 확작성이 생김???
 // const FileInput =
 //   <ImageFileInput {...props} imageUpLoader={imageUploader} />
-const FileInput = memo(props => (
+const FileInput = memo(
+  props => (
   <ImageFileInput {...props} imageUpLoader={imageUploader} />
-));
+);
+);
 
 ReactDOM.render(
   <React.StrictMode>

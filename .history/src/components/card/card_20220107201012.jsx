@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import styles from './card.module.css';
 
 const DEFAULT_IMAGE = '/images/default.jpeg';
